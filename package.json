@@ -1,0 +1,29 @@
+{
+  "name": "nitro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build --verbose src",
+    "build:watch": "tsc --build --verbose --watch src",
+    "build:clean": "tsc --build --clean src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rustymotors/nitro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rustymotors/nitro/issues"
+  },
+  "homepage": "https://github.com/rustymotors/nitro#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  }
+}
