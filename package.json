@@ -26,5 +26,10 @@
     "@types/node": "^22.15.21",
     "typescript": "^5.8.3",
     "vitest": "^3.1.4"
+  },
+  "dependencies": {
+    "@types/sequelize": "^4.28.20",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
   }
 }

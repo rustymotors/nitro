@@ -1,6 +1,6 @@
 /*
  *  This file is part of the Nitro project.
- *  This file is part of the shared code for the application.
+ *  This file is part of the core code for the application.
  *  Copyright (C) 2025 Molly Draven
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -17,4 +17,4 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export {};
+export {User} from './User.js';
