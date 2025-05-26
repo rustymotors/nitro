@@ -3,7 +3,7 @@
     "composite": true,
     "rootDir": ".",
     "target": "es2016",   
-    "module": "NodeNext", 
+    "module": "ESNext", 
     "allowJs": false,     
     "declaration": true,  
     "declarationMap": true,  
