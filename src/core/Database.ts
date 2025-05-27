@@ -28,32 +28,11 @@ import { DBUser } from "./models/DBUser";
  */
 export async function getUserFromDatabaseByUsername(
 	username: string,
-): Promise<{
-    username: string;
-	passwordHash: string;
-	customerId: string;
-} | null> {
-	if (!username) {
-		return Promise.resolve(null);
-	}
+): Promise<{ username: string; passwordHash: string; customerId: string } | null> {
+	if (!username) return null;
 
-	// Ensure username is a string
-	if (typeof username !== "string") {
-		return Promise.resolve(null);
-	}
-
-	// Find the user in the database
-	const user = await DBUser.findOne({
-		where: { username },
-	});
-
-	if (!user) {
-		return Promise.resolve(null);
-	}
-		return Promise.resolve({
-			username: user.username,
-			customerId: user.customerId,
-			passwordHash: user.passwordHash,
-		});
-	
+	const user = await DBUser.findOne({ where: { username } });
+	return user
+		? { username: user.username, customerId: user.customerId, passwordHash: user.passwordHash }
+		: null;
 }
