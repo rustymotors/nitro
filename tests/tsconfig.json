@@ -1,0 +1,23 @@
+{
+    "extends": "../src/tsconfig-base",
+    "compilerOptions": {
+        "rootDir": "."
+    },
+    "references": [
+        {
+            "path": "../src/server",
+        },
+        {
+            "path": "../src/client",
+        },
+        {
+            "path": "../src/core",
+        },
+        {
+            "path": "../src/web",
+        }
+    ],
+    "include": [
+        "**/*"
+    ]
+}

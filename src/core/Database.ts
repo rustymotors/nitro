@@ -19,6 +19,13 @@
 
 import { DBUser } from "./models/DBUser";
 
+/**
+ * Retrieves a user from the database by their username.
+ *
+ * @param username - The username of the user to retrieve.
+ * @returns A promise that resolves to an object containing the user's username, password hash, and customer ID,
+ *          or `null` if the user is not found or the input is invalid.
+ */
 export async function getUserFromDatabaseByUsername(
 	username: string,
 ): Promise<{

@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --build --verbose src",
-    "build:watch": "tsc --build --verbose --watch src",
+    "build:watch": "tsc --build --verbose --watch src tests",
     "build:clean": "tsc --build --clean src",
     "test": "vitest run",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "dev": "concurrently \"npm run build:watch\" \"npm run test:watch\""
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/rustymotors/nitro#readme",
   "devDependencies": {
     "@types/node": "^22.15.21",
+    "concurrently": "^9.1.2",
     "typescript": "^5.8.3",
     "vitest": "^3.1.4"
   },
